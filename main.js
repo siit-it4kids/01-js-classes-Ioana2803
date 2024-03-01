@@ -13,12 +13,12 @@ class AmongUsPlayer
     {
         if (this.isAlive)
         {
-            console.log(`Player ${this.name} was ejected. He was ${this.isImpostor ? '' : 'not '}an impostor`);
+            console.log(`${this.name} was ${this.isImpostor ? 'an impostor. 😉' : 'not an impostor. 🥲'}`);
             this.isAlive = false;
         }
         else
         {
-            console.log(`Player ${this.name} is already ejected.`);
+            console.log(`${this.name} is already ejected.`);
         }
     }
 
@@ -26,19 +26,19 @@ class AmongUsPlayer
     {
         if(this.isAlive)
         {
-            console.log(`Player ${this.name} with color ${this.color} and ${this.avatar} is alive`);
+            console.log(`${this.name} -> color: ${this.color} and avatar: ${this.avatar} is alive.`);
         }
         else
         {
-            console.log(`Player ${this.name} with color ${this.color} and ${this.avatar} is ${this.isImpostor ? '' : 'not '}an impostor`);
+            console.log(`${this.name} -> color ${this.color} and avatar: ${this.avatar}. Status: DEAD. Was ${this.isImpostor ? 'an impostor. 😉' : 'not an impostor. 🥲'}`);
         }
     }
 }
 
-function choosingImpostor()
-{
-    Math.floor(Math.random() * 10);
-}
+// function choosingImpostor()
+// {
+//     Math.floor(Math.random() * 10);
+// }
 
 function displayPlayers()
 {
